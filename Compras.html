@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Yasmim Abrahão">
+    <link rel="stylesheet" href="PakiMemo.css">
+    <title>Compras</title>
+</head>
+<body>
+    <header>
+        <img src="./Imagens/PakiLogoTopo.png" alt="" class="imgLogo" >
+        <span class="ender">Rua do Paço do Elefantinho, 123 <br>
+            Tel: (21) 4321-5678<br>
+            contato@paquiderme.com.br
+            </span>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="PakiMemo.html">INICIAL</a></li>
+            <li><a href="Memorias.html">MEMÓRIAS</a></li>
+            <li><a href="Discos.html">HDs / SSDs</a></li>
+            <li><a href="Cadastro.html">CADASTRO</a></li>
+            <li><a href="Compras.html">COMPRAS</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form action="" method="post" class="formBox">
+            Compras
+            <fieldset class="FSLinhaInteira">
+                <legend>Identificação</legend>
+
+                <div class="LinhaForm">
+                     <div id="loginCad" class="ColEsq">
+                        <label for="nome"  class="LabBox">E-mail:</label>
+                        <input type="text" name="email" id="idEmail" class="InpBoxMed" autofocus required />
+                    </div>
+                    
+                    <div id="senhaCad" class="ColDir">
+                        <label for="senha" class="LabBox">Senha:</label>
+                        <input type="password" name="senha" class="InpBoxMed" required />
+                    </div>
+                </div>
+                
+                <div class="LinhaForm">
+                    <label for="cadastro"> Se você ainda não tem cadastro clique <a href="Cadastro.html">aqui</a>!</label>
+                </div>
+                
+            </fieldset>
+
+            <fieldset class="FSLinhaInteira">
+                <legend>Lista de Compras</legend>
+
+                <div class="LinhaForm">
+                    <div id="lisSelProd" class="ColEsq">
+                        <label for="produtos" class="LabBox">Produtos:</label>
+                        <select name="produtos" id="selProduto">
+                            <option value="-----" disabled selected>-----</option>
+                            <optgroup label="Memória DDR3" value="">
+                                <option value="kingston">Kingston 4Gb</option>
+                                <option value="samsung8gb">Samsung 8Gb</option>
+                            </optgroup>
+                            <optgroup label="Memória DDR4">
+                                <option value="kingstonfury">Kingston Fury 8Gb</option>
+                                <option value="corsair">Corsair Vengeance 8Gb</option>
+                            </optgroup>
+                            <optgroup label="HD Sata III">
+                                <option value="">Western Digital 500 Gb</option>
+                                <option value="">Seagate 1 TB</option>
+                            </optgroup>
+                            <optgroup label="SSD Sata III">
+                                <option value="">Samdisk 480 Gb</option>
+                                <option value="">Kingston 960Gb</option>
+                            </optgroup>
+                            <optgroup label="SSD M2">
+                                <option value="">Kingston 500 Gb</option>
+                                <option value="">Western Digital 240Gb</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div id="btnIncluir" class="ColDir">
+                        <input type="submit" value="Incluir" class="InpBoxMed" />
+                    </div>
+
+                </div>
+
+                <div id="boxPedidos" class="LinhaForm">
+                    <textarea name="textPedidos" id="lisPedArea" cols="30" rows="10" readonly></textarea>
+                </div>
+
+
+                <div class="LinhaForm ColDir">
+                    <label for="" class="labBox" >Valor: R$</label>
+                    <input type="text" name="valor" class="InpBoxMed" readonly />
+                </div>
+
+            </fieldset>
+
+            <fieldset class="FSLinhaInteira">
+                <legend>Dados do Cartão</legend>
+
+                <fieldset id="fsBandeira" class="FSColDir">
+                    <legend>Bandeira:</legend>
+                    <input type="radio" name="bandeira" id="visa" accesskey="v" checked />Visa
+                    <input type="radio" name="bandeira" id="master" accesskey="m" />Master
+                    <input type="radio" name="bandeira" id="elo" accesskey="e" />Elo
+                </fieldset>
+
+                <div id="numCartao" class="ColEsq LinhaForm">
+                    <label for="numeroCartao" class="LabBox"> Número:</label>
+                    <input type="number" name="num1" class="numDD" value="1" min="1" max="99" required />
+                    <input type="number" name="num2" class="numDD" value="1" min="1" max="99" required />
+                    <input type="number" name="num3" class="numDD" value="1" min="1" max="99" required />
+                    <input type="number" name="num4" class="numDD" value="1" min="1" max="99" required />
+                </div>
+
+                <div id="valCartao" class="ColEsq LinhaForm">
+                    <label for="valCartao" class="LabBox">Validade:</label>
+                    <input type="number" name="validadeDia" class="numDD" value="1" min="1" max="12" required /> /
+                    <input type="number" name="validadeAno" class="numQD" value="2022" min="2022" max="9999" required />
+                    
+                </div>
+
+                <div id="boxParcel" class="ColEsq LinhaForm">
+                    <label for="parcelasCartao" class="LabBox">Parcelas:</label>
+                    <input type="number" name="parcelas" class="numDD" value="1" min="1" max="99" required /> x Sem Juros
+                </div>
+               
+            </fieldset>
+               
+            <div class="botoes">
+                <input type="submit" value="Confirmar">
+                <input type="reset" value="Limpar"> 
+            </div>
+            
+        </form>  
+    </section>
+</body>
+</html>

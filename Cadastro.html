@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Yasmim Abrahão">
+    <link rel="stylesheet" href="PakiMemo.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <img src="./Imagens/PakiLogoTopo.png" alt="Logo Paki Memo" class="imgLogo" >
+        <span class="ender">Rua do Paço do Elefantinho, 123 <br>
+            Tel: (21) 4321-5678<br>
+            contato@paquiderme.com.br
+            </span>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="PakiMemo.html">INICIAL</a></li>
+            <li><a href="Memorias.html">MEMÓRIAS</a></li>
+            <li><a href="Discos.html">HDs / SSDs</a></li>
+            <li><a href="Cadastro.html">CADASTRO</a></li>
+            <li><a href="Compras.html">COMPRAS</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form action="" method="post" class="formBox">
+            Cadastro
+            <fieldset class="FSLinhaInteira">
+                <legend>Identificação</legend>
+
+                <div class="LinhaForm">
+                    <label for="nome"  class="LabBox" >E-mail:</label>
+                    <input type="email" name="email" id="nome" class="InpBoxGnd" autofocus required />
+                </div>
+                
+                <div class="LinhaForm">
+                    <div class="ColEsq">
+                        <label for="senha" class="LabBox">Senha:</label>
+                        <input type="password" name="senha" id="senha" class="InpBoxMed" required />
+                    </div>
+                    
+                    <div class="ColDir">
+                        <label for="confirmaSenha" class="LabBox">Confirme:</label>
+                        <input type="password" name="confirmaSenha" class="InpBoxMed" required />
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="FSLinhaInteira">
+                <legend>Dados Pessoais</legend>
+
+                <div class="LinhaForm">
+                    <label for="nome" class="LabBox">Nome:</label>
+                    <input type="text" name="nome" class="InpBoxGnd" required />
+                </div>
+                
+                <div id="linhaEnder" class="LinhaForm" >
+                    <label for="endereco" class="LabBox" >Endereço:</label>
+                    <textarea name="endereco" id="inpEnder" class="InpBoxGnd" required></textarea>
+                </div>
+
+                <div class="LinhaForm">
+                    <div class="ColEsq">
+                        <label for="" class="LabBox">Telefone: </label>
+                        <input type="tel" name="numeroTelefone" class="InpBoxMed" required />
+                    </div>
+
+                    <div class="ColDir">
+                        <label for="" class="LabBox">Celular: </label>
+                        <input type="tel" name="numeroCelular" class="InpBoxMed" required />
+                    </div>
+                </div>
+                
+                <fieldset class="FSColEsq">
+                    <legend>Nascimento</legend>
+                    <input type="number" name="dia" class="numDD" min="1" max="31" value="1" required />/
+                    <input type="number" name="mes" class="numDD" min="1" max="12" value="1" required />/
+                    <input type="number" name="ano" class="numQD" min="1980" max="2022" value="1980"  required />
+                </fieldset>
+                <fieldset class="FSColDir">
+                    <legend>Sexo:</legend>
+                    <input type="radio" name="sexo" id="mas" accesskey="m" />Mas
+                    <input type="radio" name="sexo" id="fem" accesskey="f" />Fem
+                    <input type="radio" name="sexo" id="outro" accesskey="o" checked />Outro
+                </fieldset>
+            </fieldset>
+            <div class="botoes">
+                <input type="submit" value="Cadastrar">
+                <input type="reset" value="Limpar"> 
+            </div>
+            
+        </form>  
+    </section>
+</body>
+</html>
